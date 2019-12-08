@@ -1,0 +1,42 @@
+Please initiate processing by starting HPS
+Done processing: Total cycles: 3838271
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2597416
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2600037
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2604505
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2610005
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2602624
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2593002
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2593185
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2603193
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2595967
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2600764
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2592719
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2603328
+Errors: 9
+Please initiate processing by starting HPS
+Done processing: Total cycles: 2588567
+Errors: 9

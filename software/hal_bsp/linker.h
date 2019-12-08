@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'platformniossdram'
  * SOPC Builder design path: ../../platformniossdram.sopcinfo
  *
- * Generated: Tue Nov 19 20:55:38 EST 2019
+ * Generated: Sat Dec 07 22:01:02 EST 2019
  */
 
 /*
@@ -65,9 +65,9 @@
  *
  */
 
-#define ONCHIP_MEMORY2_0_REGION_BASE 0x4020020
+#define ONCHIP_MEMORY2_0_REGION_BASE 0x4000020
 #define ONCHIP_MEMORY2_0_REGION_SPAN 131040
-#define RESET_REGION_BASE 0x4020000
+#define RESET_REGION_BASE 0x4000000
 #define RESET_REGION_SPAN 32
 #define SDRAM_REGION_BASE 0x0
 #define SDRAM_REGION_SPAN 67108864

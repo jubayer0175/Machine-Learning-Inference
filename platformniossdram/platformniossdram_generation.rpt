@@ -1,107 +1,165 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\cygwin\home\ece4530f19\challenge-nn\platformniossdram.qsys --block-symbol-file --output-directory=C:\cygwin\home\ece4530f19\challenge-nn\platformniossdram --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading challenge-nn/platformniossdram.qsys
+Info: qsys-generate C:\cygwin64\home\local\codesign-challenge-ideas-q17\platformniossdram.qsys --block-symbol-file --output-directory=C:\cygwin64\home\local\codesign-challenge-ideas-q17\platformniossdram --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading codesign-challenge-ideas-q17/platformniossdram.qsys
 Progress: Reading input file
-Progress: Adding clk_0 [clock_source 18.1]
+Progress: Adding clk_0 [clock_source 17.1]
 Progress: Parameterizing module clk_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Adding dma_0 [altera_avalon_dma 17.1]
+Progress: Parameterizing module dma_0
+Progress: Adding flpmac_0 [flpmac 1.0]
+Progress: Parameterizing module flpmac_0
+Progress: Adding hps_0 [altera_hps 17.1]
+Progress: Parameterizing module hps_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
 Progress: Parameterizing module nios2_gen2_0
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Adding nios_custom_instr_floating_point_0 [altera_nios_custom_instr_floating_point 17.1]
+Progress: Parameterizing module nios_custom_instr_floating_point_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Adding pio_0 [altera_avalon_pio 17.1]
 Progress: Parameterizing module pio_0
-Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Adding pio_1 [altera_avalon_pio 17.1]
 Progress: Parameterizing module pio_1
-Progress: Adding pio_2 [altera_avalon_pio 18.1]
+Progress: Adding pio_2 [altera_avalon_pio 17.1]
 Progress: Parameterizing module pio_2
-Progress: Adding pll_0 [altera_pll 18.1]
+Progress: Adding pll_0 [altera_pll 17.1]
 Progress: Parameterizing module pll_0
-Progress: Adding sdram [altera_avalon_new_sdram_controller 18.1]
+Progress: Adding sdram [altera_avalon_new_sdram_controller 17.1]
 Progress: Parameterizing module sdram
-Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Adding timer_0 [altera_avalon_timer 17.1]
 Progress: Parameterizing module timer_0
-Progress: Adding timer_1 [altera_avalon_timer 18.1]
+Progress: Adding timer_1 [altera_avalon_timer 17.1]
 Progress: Parameterizing module timer_1
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Info: platformniossdram.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: platformniossdram.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: platformniossdram.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: platformniossdram.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: platformniossdram.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: platformniossdram.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
 Info: platformniossdram.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: platformniossdram.pio_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: platformniossdram.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
 Warning: platformniossdram.pll_0: Able to implement PLL - Actual settings differ from Requested settings
 Info: platformniossdram.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: platformniossdram.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\cygwin\home\ece4530f19\challenge-nn\platformniossdram.qsys --synthesis=VERILOG --output-directory=C:\cygwin\home\ece4530f19\challenge-nn\platformniossdram\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading challenge-nn/platformniossdram.qsys
+Info: qsys-generate C:\cygwin64\home\local\codesign-challenge-ideas-q17\platformniossdram.qsys --synthesis=VERILOG --output-directory=C:\cygwin64\home\local\codesign-challenge-ideas-q17\platformniossdram\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading codesign-challenge-ideas-q17/platformniossdram.qsys
 Progress: Reading input file
-Progress: Adding clk_0 [clock_source 18.1]
+Progress: Adding clk_0 [clock_source 17.1]
 Progress: Parameterizing module clk_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Adding dma_0 [altera_avalon_dma 17.1]
+Progress: Parameterizing module dma_0
+Progress: Adding flpmac_0 [flpmac 1.0]
+Progress: Parameterizing module flpmac_0
+Progress: Adding hps_0 [altera_hps 17.1]
+Progress: Parameterizing module hps_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
 Progress: Parameterizing module nios2_gen2_0
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Adding nios_custom_instr_floating_point_0 [altera_nios_custom_instr_floating_point 17.1]
+Progress: Parameterizing module nios_custom_instr_floating_point_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Adding pio_0 [altera_avalon_pio 17.1]
 Progress: Parameterizing module pio_0
-Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Adding pio_1 [altera_avalon_pio 17.1]
 Progress: Parameterizing module pio_1
-Progress: Adding pio_2 [altera_avalon_pio 18.1]
+Progress: Adding pio_2 [altera_avalon_pio 17.1]
 Progress: Parameterizing module pio_2
-Progress: Adding pll_0 [altera_pll 18.1]
+Progress: Adding pll_0 [altera_pll 17.1]
 Progress: Parameterizing module pll_0
-Progress: Adding sdram [altera_avalon_new_sdram_controller 18.1]
+Progress: Adding sdram [altera_avalon_new_sdram_controller 17.1]
 Progress: Parameterizing module sdram
-Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Adding timer_0 [altera_avalon_timer 17.1]
 Progress: Parameterizing module timer_0
-Progress: Adding timer_1 [altera_avalon_timer 18.1]
+Progress: Adding timer_1 [altera_avalon_timer 17.1]
 Progress: Parameterizing module timer_1
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Info: platformniossdram.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: platformniossdram.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: platformniossdram.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: platformniossdram.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: platformniossdram.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: platformniossdram.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
 Info: platformniossdram.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: platformniossdram.pio_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: platformniossdram.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
 Warning: platformniossdram.pll_0: Able to implement PLL - Actual settings differ from Requested settings
 Info: platformniossdram.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: platformniossdram.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
 Info: platformniossdram: Generating platformniossdram "platformniossdram" for QUARTUS_SYNTH
 Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux_002.sink1
+Info: Inserting clock-crossing logic between cmd_demux_001.src1 and cmd_mux_003.sink1
+Info: Inserting clock-crossing logic between cmd_demux_001.src2 and cmd_mux_005.sink1
+Info: Inserting clock-crossing logic between cmd_demux_001.src3 and cmd_mux_006.sink1
+Info: Inserting clock-crossing logic between cmd_demux_001.src4 and cmd_mux_007.sink1
+Info: Inserting clock-crossing logic between cmd_demux_002.src0 and cmd_mux_002.sink2
+Info: Inserting clock-crossing logic between cmd_demux_002.src1 and cmd_mux_003.sink2
+Info: Inserting clock-crossing logic between cmd_demux_002.src2 and cmd_mux_005.sink2
+Info: Inserting clock-crossing logic between cmd_demux_002.src3 and cmd_mux_006.sink2
+Info: Inserting clock-crossing logic between cmd_demux_002.src4 and cmd_mux_007.sink2
+Info: Inserting clock-crossing logic between rsp_demux_002.src1 and rsp_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux_002.src2 and rsp_mux_002.sink0
 Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
+Info: Inserting clock-crossing logic between rsp_demux_003.src1 and rsp_mux_001.sink1
+Info: Inserting clock-crossing logic between rsp_demux_003.src2 and rsp_mux_002.sink1
+Info: Inserting clock-crossing logic between rsp_demux_005.src1 and rsp_mux_001.sink2
+Info: Inserting clock-crossing logic between rsp_demux_005.src2 and rsp_mux_002.sink2
+Info: Inserting clock-crossing logic between rsp_demux_006.src1 and rsp_mux_001.sink3
+Info: Inserting clock-crossing logic between rsp_demux_006.src2 and rsp_mux_002.sink3
+Info: Inserting clock-crossing logic between rsp_demux_007.src1 and rsp_mux_001.sink4
+Info: Inserting clock-crossing logic between rsp_demux_007.src2 and rsp_mux_002.sink4
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: hps_0: "platformniossdram" instantiated altera_hps "hps_0"
 Info: jtag_uart_0: Starting RTL generation for module 'platformniossdram_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=platformniossdram_jtag_uart_0 --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0002_jtag_uart_0_gen//platformniossdram_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=platformniossdram_jtag_uart_0 --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0002_jtag_uart_0_gen//platformniossdram_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'platformniossdram_jtag_uart_0'
 Info: jtag_uart_0: "platformniossdram" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "platformniossdram" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'platformniossdram_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platformniossdram_onchip_memory2_0 --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0003_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0003_onchip_memory2_0_gen//platformniossdram_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platformniossdram_onchip_memory2_0 --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0003_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0003_onchip_memory2_0_gen//platformniossdram_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'platformniossdram_onchip_memory2_0'
 Info: onchip_memory2_0: "platformniossdram" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pio_0: Starting RTL generation for module 'platformniossdram_pio_0'
-Info: pio_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platformniossdram_pio_0 --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0004_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0004_pio_0_gen//platformniossdram_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platformniossdram_pio_0 --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0004_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0004_pio_0_gen//platformniossdram_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'platformniossdram_pio_0'
 Info: pio_0: "platformniossdram" instantiated altera_avalon_pio "pio_0"
 Info: pio_1: Starting RTL generation for module 'platformniossdram_pio_1'
-Info: pio_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platformniossdram_pio_1 --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0005_pio_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0005_pio_1_gen//platformniossdram_pio_1_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_1:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platformniossdram_pio_1 --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0005_pio_1_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0005_pio_1_gen//platformniossdram_pio_1_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_1: Done RTL generation for module 'platformniossdram_pio_1'
 Info: pio_1: "platformniossdram" instantiated altera_avalon_pio "pio_1"
 Info: pio_2: Starting RTL generation for module 'platformniossdram_pio_2'
-Info: pio_2:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platformniossdram_pio_2 --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0006_pio_2_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0006_pio_2_gen//platformniossdram_pio_2_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_2:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platformniossdram_pio_2 --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0006_pio_2_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0006_pio_2_gen//platformniossdram_pio_2_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_2: Done RTL generation for module 'platformniossdram_pio_2'
 Info: pio_2: "platformniossdram" instantiated altera_avalon_pio "pio_2"
 Info: pll_0: "platformniossdram" instantiated altera_pll "pll_0"
 Info: sdram: Starting RTL generation for module 'platformniossdram_sdram'
-Info: sdram:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=platformniossdram_sdram --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0008_sdram_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0008_sdram_gen//platformniossdram_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=platformniossdram_sdram --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0008_sdram_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0008_sdram_gen//platformniossdram_sdram_component_configuration.pl  --do_build_sim=0  ]
 Info: sdram: Done RTL generation for module 'platformniossdram_sdram'
 Info: sdram: "platformniossdram" instantiated altera_avalon_new_sdram_controller "sdram"
 Info: timer_0: Starting RTL generation for module 'platformniossdram_timer_0'
-Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=platformniossdram_timer_0 --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0009_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0009_timer_0_gen//platformniossdram_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=platformniossdram_timer_0 --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0009_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0009_timer_0_gen//platformniossdram_timer_0_component_configuration.pl  --do_build_sim=0  ]
 Info: timer_0: Done RTL generation for module 'platformniossdram_timer_0'
 Info: timer_0: "platformniossdram" instantiated altera_avalon_timer "timer_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -116,53 +174,73 @@ Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "platformniossdram" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "platformniossdram" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "platformniossdram" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
 Info: cpu: Starting RTL generation for module 'platformniossdram_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=platformniossdram_nios2_gen2_0_cpu --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0012_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt8220_2586354629588377487.dir/0012_cpu_gen//platformniossdram_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2019.11.19 20:46:18 (*) Starting Nios II generation
-Info: cpu: # 2019.11.19 20:46:18 (*)   Checking for plaintext license.
-Info: cpu: # 2019.11.19 20:46:18 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2019.11.19 20:46:18 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2019.11.19 20:46:18 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2019.11.19 20:46:18 (*)   Plaintext license not found.
-Info: cpu: # 2019.11.19 20:46:18 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2019.11.19 20:46:18 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2019.11.19 20:46:18 (*)   Creating all objects for CPU
-Info: cpu: # 2019.11.19 20:46:19 (*)   Generating RTL from CPU objects
-Info: cpu: # 2019.11.19 20:46:19 (*)   Creating plain-text RTL
-Info: cpu: # 2019.11.19 20:46:20 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=platformniossdram_nios2_gen2_0_cpu --dir=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0013_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/17.1/quartus/bin64/ --verilog --config=C:/Users/Jubayer/AppData/Local/Temp/alt8238_6242906429449698669.dir/0013_cpu_gen//platformniossdram_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.12.07 20:54:10 (*) Starting Nios II generation
+Info: cpu: # 2019.12.07 20:54:10 (*)   Checking for plaintext license.
+Info: cpu: # 2019.12.07 20:54:11 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/17.1/quartus/bin64/
+Info: cpu: # 2019.12.07 20:54:11 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.12.07 20:54:11 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.12.07 20:54:11 (*)   Plaintext license not found.
+Info: cpu: # 2019.12.07 20:54:11 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2019.12.07 20:54:11 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.12.07 20:54:11 (*)   Creating all objects for CPU
+Info: cpu: # 2019.12.07 20:54:13 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.12.07 20:54:13 (*)   Creating plain-text RTL
+Info: cpu: # 2019.12.07 20:54:14 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'platformniossdram_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
 Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
 Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: hps_0_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
 Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
 Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
-Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
 Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
-Info: sdram_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "sdram_s1_burst_adapter"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: hps_0_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_axi_master_wr_limiter"
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: onchip_memory2_0_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "onchip_memory2_0_s1_burst_adapter"
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
-Info: Reusing file C:/cygwin/home/ece4530f19/challenge-nn/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_003"
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_003"
+Info: rsp_demux_005: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_005"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/cygwin/home/ece4530f19/challenge-nn/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/cygwin/home/ece4530f19/challenge-nn/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: sdram_s1_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "sdram_s1_rsp_width_adapter"
-Info: Reusing file C:/cygwin/home/ece4530f19/challenge-nn/platformniossdram/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file C:/cygwin/home/ece4530f19/challenge-nn/platformniossdram/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
-Info: Reusing file C:/cygwin/home/ece4530f19/challenge-nn/platformniossdram/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/cygwin64/home/local/codesign-challenge-ideas-q17/platformniossdram/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: avalon_st_adapter_003: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_003"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_003" instantiated error_adapter "error_adapter_0"
-Info: platformniossdram: Done "platformniossdram" with 39 modules, 65 files
+Info: platformniossdram: Done "platformniossdram" with 54 modules, 124 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

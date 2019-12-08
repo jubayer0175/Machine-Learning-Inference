@@ -35,7 +35,7 @@ module platformniossdram_timer_0 (
 
   output           irq;
   output  [ 15: 0] readdata;
-  input   [  3: 0] address;
+  input   [  2: 0] address;
   input            chipselect;
   input            clk;
   input            reset_n;
@@ -50,29 +50,23 @@ reg     [  3: 0] control_register;
 wire             control_wr_strobe;
 reg              counter_is_running;
 wire             counter_is_zero;
-wire    [ 63: 0] counter_load_value;
-reg     [ 63: 0] counter_snapshot;
+wire    [ 31: 0] counter_load_value;
+reg     [ 31: 0] counter_snapshot;
 reg              delayed_unxcounter_is_zeroxx0;
 wire             do_start_counter;
 wire             do_stop_counter;
 reg              force_reload;
-reg     [ 63: 0] internal_counter;
+reg     [ 31: 0] internal_counter;
 wire             irq;
-reg     [ 15: 0] period_halfword_0_register;
-wire             period_halfword_0_wr_strobe;
-reg     [ 15: 0] period_halfword_1_register;
-wire             period_halfword_1_wr_strobe;
-reg     [ 15: 0] period_halfword_2_register;
-wire             period_halfword_2_wr_strobe;
-reg     [ 15: 0] period_halfword_3_register;
-wire             period_halfword_3_wr_strobe;
+reg     [ 15: 0] period_h_register;
+wire             period_h_wr_strobe;
+reg     [ 15: 0] period_l_register;
+wire             period_l_wr_strobe;
 wire    [ 15: 0] read_mux_out;
 reg     [ 15: 0] readdata;
-wire             snap_halfword_0_wr_strobe;
-wire             snap_halfword_1_wr_strobe;
-wire             snap_halfword_2_wr_strobe;
-wire             snap_halfword_3_wr_strobe;
-wire    [ 63: 0] snap_read_value;
+wire             snap_h_wr_strobe;
+wire             snap_l_wr_strobe;
+wire    [ 31: 0] snap_read_value;
 wire             snap_strobe;
 wire             start_strobe;
 wire             status_wr_strobe;
@@ -83,7 +77,7 @@ reg              timeout_occurred;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          internal_counter <= 64'hC34F;
+          internal_counter <= 32'hC34F;
       else if (counter_is_running || force_reload)
           if (counter_is_zero    || force_reload)
               internal_counter <= counter_load_value;
@@ -93,17 +87,15 @@ reg              timeout_occurred;
 
 
   assign counter_is_zero = internal_counter == 0;
-  assign counter_load_value = {period_halfword_3_register,
-    period_halfword_2_register,
-    period_halfword_1_register,
-    period_halfword_0_register};
+  assign counter_load_value = {period_h_register,
+    period_l_register};
 
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
           force_reload <= 0;
       else if (clk_en)
-          force_reload <= period_halfword_3_wr_strobe || period_halfword_2_wr_strobe || period_halfword_1_wr_strobe || period_halfword_0_wr_strobe;
+          force_reload <= period_h_wr_strobe || period_l_wr_strobe;
     end
 
 
@@ -149,14 +141,10 @@ reg              timeout_occurred;
 
   assign irq = timeout_occurred && control_interrupt_enable;
   //s1, which is an e_avalon_slave
-  assign read_mux_out = ({16 {(address == 2)}} & period_halfword_0_register) |
-    ({16 {(address == 3)}} & period_halfword_1_register) |
-    ({16 {(address == 4)}} & period_halfword_2_register) |
-    ({16 {(address == 5)}} & period_halfword_3_register) |
-    ({16 {(address == 6)}} & snap_read_value[15 : 0]) |
-    ({16 {(address == 7)}} & snap_read_value[31 : 16]) |
-    ({16 {(address == 8)}} & snap_read_value[47 : 32]) |
-    ({16 {(address == 9)}} & snap_read_value[63 : 48]) |
+  assign read_mux_out = ({16 {(address == 2)}} & period_l_register) |
+    ({16 {(address == 3)}} & period_h_register) |
+    ({16 {(address == 4)}} & snap_read_value[15 : 0]) |
+    ({16 {(address == 5)}} & snap_read_value[31 : 16]) |
     ({16 {(address == 1)}} & control_register) |
     ({16 {(address == 0)}} & {counter_is_running,
     timeout_occurred});
@@ -170,51 +158,29 @@ reg              timeout_occurred;
     end
 
 
-  assign period_halfword_0_wr_strobe = chipselect && ~write_n && (address == 2);
-  assign period_halfword_1_wr_strobe = chipselect && ~write_n && (address == 3);
-  assign period_halfword_2_wr_strobe = chipselect && ~write_n && (address == 4);
-  assign period_halfword_3_wr_strobe = chipselect && ~write_n && (address == 5);
+  assign period_l_wr_strobe = chipselect && ~write_n && (address == 2);
+  assign period_h_wr_strobe = chipselect && ~write_n && (address == 3);
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          period_halfword_0_register <= 16'hC34F;
-      else if (period_halfword_0_wr_strobe)
-          period_halfword_0_register <= writedata;
+          period_l_register <= 49999;
+      else if (period_l_wr_strobe)
+          period_l_register <= writedata;
     end
 
 
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          period_halfword_1_register <= 16'h0;
-      else if (period_halfword_1_wr_strobe)
-          period_halfword_1_register <= writedata;
+          period_h_register <= 0;
+      else if (period_h_wr_strobe)
+          period_h_register <= writedata;
     end
 
 
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          period_halfword_2_register <= 16'h0;
-      else if (period_halfword_2_wr_strobe)
-          period_halfword_2_register <= writedata;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          period_halfword_3_register <= 16'h0;
-      else if (period_halfword_3_wr_strobe)
-          period_halfword_3_register <= writedata;
-    end
-
-
-  assign snap_halfword_0_wr_strobe = chipselect && ~write_n && (address == 6);
-  assign snap_halfword_1_wr_strobe = chipselect && ~write_n && (address == 7);
-  assign snap_halfword_2_wr_strobe = chipselect && ~write_n && (address == 8);
-  assign snap_halfword_3_wr_strobe = chipselect && ~write_n && (address == 9);
-  assign snap_strobe = snap_halfword_0_wr_strobe ||snap_halfword_1_wr_strobe ||snap_halfword_2_wr_strobe ||snap_halfword_3_wr_strobe;
+  assign snap_l_wr_strobe = chipselect && ~write_n && (address == 4);
+  assign snap_h_wr_strobe = chipselect && ~write_n && (address == 5);
+  assign snap_strobe = snap_l_wr_strobe || snap_h_wr_strobe;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)

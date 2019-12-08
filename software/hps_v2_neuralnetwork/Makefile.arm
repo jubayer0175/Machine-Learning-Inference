@@ -1,0 +1,15 @@
+ALT_DEVICE_FAMILY ?= soc_cv_av
+SOCEDS_ROOT = c:/intelFPGA/18.1/embedded
+HWLIBS_ROOT = $(SOCEDS_ROOT)/ip/altera/hps/altera_hps/hwlib
+CROSS_COMPILE = arm-linux-gnueabihf-
+CFLAGS = -Wall -lm   -O3 -mcpu=cortex-a9 -mtune=cortex-a9\
+       	 -D$(ALT_DEVICE_FAMILY) \
+	 -I$(HWLIBS_ROOT)/include/$(ALT_DEVICE_FAMILY)   \
+	 -I$(HWLIBS_ROOT)/include/ \
+	 -I../../hal_bsp
+
+mnist_infertest: dataset.c functions.c loss_functions.c mnist_infertest.c neuralnet.c optimizer.c tensor.c
+	arm-linux-gnueabihf-gcc $(CFLAGS) -std=c11 -DNONIOS dataset.c functions.c loss_functions.c mnist_infertest.c neuralnet.c optimizer.c tensor.c -o mnist_infertest
+	
+clean:
+	rm -f *.o mnist_infertest
